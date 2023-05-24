@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Exceptions\**" />
+    <Compile Remove="Extensions\**" />
+    <Compile Remove="ExternalApp\**" />
+    <Compile Remove="Logging\**" />
+    <Compile Remove="Queue\**" />
+    <Compile Remove="Settings\**" />
+    <Compile Remove="Utils\**" />
+    <Compile Remove="Web\**" />
+    <EmbeddedResource Remove="Exceptions\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EmbeddedResource Remove="ExternalApp\**" />
+    <EmbeddedResource Remove="Logging\**" />
+    <EmbeddedResource Remove="Queue\**" />
+    <EmbeddedResource Remove="Settings\**" />
+    <EmbeddedResource Remove="Utils\**" />
+    <EmbeddedResource Remove="Web\**" />
+    <None Remove="Exceptions\**" />
+    <None Remove="Extensions\**" />
+    <None Remove="ExternalApp\**" />
+    <None Remove="Logging\**" />
+    <None Remove="Queue\**" />
+    <None Remove="Settings\**" />
+    <None Remove="Utils\**" />
+    <None Remove="Web\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.11.1" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="DapperExtensions" Version="1.7.0" />
+    <PackageReference Include="ElmahCore" Version="2.1.2" />
+    <PackageReference Include="SqlKata" Version="2.4.0" />
+    <PackageReference Include="SqlKata.Execution" Version="2.4.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,166 @@
+﻿@model IEnumerable<Outline.Entity.ContractResponseModel>
+@{
+    ViewData["Title"] = "Report Excel";
+}
+<style>
+    /* Main container */
+    .report-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Section headings */
+    .report-section-heading {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Tables */
+    .report-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+        .report-table thead {
+            background-color: #f2f2f2;
+        }
+
+        .report-table th,
+        .report-table td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .report-table th {
+            font-weight: bold;
+        }
+
+        .report-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+    /* Charts or Graphs */
+    .report-chart {
+        /* Add styles specific to your charts or graphs library */
+    }
+
+    /* Data rows or items */
+    .report-row {
+        /* Add styles for individual rows or items in the report */
+    }
+
+    /* Summary or total sections */
+    .report-summary {
+        /* Add styles for the summary or total sections in the report */
+    }
+
+</style>
+
+    <div class="report-container">
+        <h2 class="report-section-heading">Contract Data</h2>
+    <table class ="report-table">
+    <thead>
+        <tr>
+          
+            <th>
+                @Html.DisplayNameFor(model => model.CommonLabourCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisplayName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EEO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SingleMaster)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JointVentureName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractManager)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimesheetVersionType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.CommonLabourCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisplayName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EEO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SingleMaster)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JointVentureName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractManager)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimesheetVersionType)
+            </td>
+            <td>
+           
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+        @Html.ActionLink("Export Data", "ExportCSV","Contract", new { })
+    </div>
+    <div class="report-summary">
+      
+    </div>
+
